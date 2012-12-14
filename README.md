@@ -1,4 +1,4 @@
-# pg-jsPLV8onpath
+# pg-jsonpath
 
 ## About
 
