@@ -1,0 +1,4 @@
+comment = 'JSONPath Wrapper'
+default_version = '0.1'
+module_pathname = '$libdir/pg-jsonpath'
+relocatable = true
