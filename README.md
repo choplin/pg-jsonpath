@@ -6,7 +6,7 @@ This extension is a wrapper of JavaScript implementation of [JSONPath - XPath fo
 
 ## Dependency
 
-* [PLV8 - plv8js - V8 Engine Javascript Procedural Language add-on for PostgreSQL - Google Project Hosting](http://code.google.com/p/plv8js/wiki/PLV8)
+* [plv8](http://code.google.com/p/plv8js/wiki/PLV8)
 
 ## Instalation
 
@@ -22,6 +22,10 @@ If you do now know about JSONPath specification, see [official page](http://goes
 
 * jsonPath(obj json, expr text)
 
-```sql
-SELECT ()
+```sh
+SELECT jsonPath('{"x": {"a":1, "b":2}}'::json, '$.x.[a,b]');
+ jsonpath 
+----------
+ {1,2}
+(1 row)
 ```
