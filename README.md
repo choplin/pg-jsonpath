@@ -20,7 +20,7 @@ $ psql -c "CREATE EXTENSION jsonpath;"
 
 If you do now know about JSONPath specification, see [official page](http://goessner.net/articles/JsonPath/).
 
-* jsonPath(obj json, expr text)
+* jsonPath(obj json, expr text) RETURNS json[]
 
 ```sh
 SELECT jsonPath('{"x": {"a":1, "b":2}}'::json, '$.x.[a,b]');
