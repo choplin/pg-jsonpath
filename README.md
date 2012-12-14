@@ -2,7 +2,7 @@
 
 ## About
 
-This extension is a wrapper of JavaScript implementation of [JSONPath - XPath for JSON](http://goessner.net/articles/JsonPath/).
+This extension is a wrapper of JavaScript implementation of [JSONPath](http://goessner.net/articles/JsonPath/).
 
 ## Dependency
 
