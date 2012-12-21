@@ -1,7 +1,11 @@
 CREATE FUNCTION jsonPath(obj json, expr text) RETURNS json[] AS $$
 #include "jsonpath-0.8.0.js"
     var result = jsonPath(obj, expr);
-    return result ? result : [];
+    if (result){
+        return result.map(function(r){ return JSON.stringify(r) });
+    } else {
+        return [];
+    }
 $$ LANGUAGE plv8 IMMUTABLE STRICT;
 
 CREATE FUNCTION jsonPath(obj json, expr text, arg json) RETURNS text[] AS $$
